@@ -1,0 +1,45 @@
+<project default="runtests">
+	<property environment="env"/>
+	<property name="provar.home" value="${PROVAR_HOME}"/>
+	<property name="testproject.home" value="${env.WORKSPACE}/JenkinsDemoProject"/>
+	<property name="testproject.results" value="${testproject.home}/ANT/Results"/>
+	<property name="secrets.password" value="${env.ProvarSecretsPassword}"/>
+	<property name="testenvironment.secretspassword" value="${env.ProvarSecretsPassword_EnvName}"/>
+	
+	
+	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar"/>
+	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
+	<taskdef name="Test-Cycle-Report" classname="com.provar.testrunner.ant.TestCycleReportTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
+	
+	<target name="runtests">
+	
+		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
+	
+		<Run-Test-Case provarHome="${provar.home}" 
+				projectPath="${testproject.home}" 
+				resultsPath="${testproject.results}" 
+				resultsPathDisposition="Increment" 
+				testEnvironment="" 
+				webBrowser="${env.Browser}" 
+				webBrowserConfiguration="Full Screen"
+				webBrowserProviderName="Desktop"
+				webBrowserDeviceName="Full Screen" 
+				excludeCallableTestCases="true" 
+				salesforceMetadataCache="Reuse" 
+				projectCachePath="../../.provarCaches"
+				testOutputlevel="DETAILED" 
+				pluginOutputlevel="WARNING"
+				stopTestRunOnError="false"
+				secretsPassword="${secrets.password}"
+				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
+				invokeTestRunMonitor="true"
+				>
+		
+			<fileset id="testcases" dir="${testproject.home}/plans/${env.TEST_PLAN}"></fileset>
+
+			<emailProperties sendEmail="true" primaryRecipients="will.hughes@provartesting.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
+			<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="true" includeBasicLogs="false" includeDetailLogs="true" includeDiagnosticTrace="false" includeTestStepTime="true" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true"/>
+		</Run-Test-Case>
+
+	</target>
+</project>
