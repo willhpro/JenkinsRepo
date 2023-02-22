@@ -23,7 +23,7 @@
         <connection id="0c517d75-2520-47bf-925a-68e61fe70910" name="GMail">
           <summary/>
           <connectionUrls>
-            <connectionUrl secureStorageNodeId="2bfa1b12-6359-4d6c-94c4-0183631a32e8" url="google:user=will.hughes@provartesting.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1676893095000"/>
+            <connectionUrl secureStorageNodeId="2bfa1b12-6359-4d6c-94c4-0183631a32e8" url="google:user=will.hughes@provartesting.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1676913334607"/>
           </connectionUrls>
         </connection>
       </connections>
