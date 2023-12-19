@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testPlan>
+<testPlan guid="d8be971e-d8f5-4a02-a6e3-a8be0027ec51">
   <planSettings/>
   <planFeatures>
     <planFeature enabled="true" name="PIECHART" type="OUTPUT">

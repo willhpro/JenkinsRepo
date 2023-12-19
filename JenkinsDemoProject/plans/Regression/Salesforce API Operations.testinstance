@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testPlanInstance testCasePath="tests/Salesforce API Operations.testcase">
+<testPlanInstance guid="1ea237a5-cbb8-4060-9b46-8b4d7aad7ce8" testCasePath="tests/Salesforce API Operations.testcase">
   <planSettings/>
   <planFeatures/>
 </testPlanInstance>

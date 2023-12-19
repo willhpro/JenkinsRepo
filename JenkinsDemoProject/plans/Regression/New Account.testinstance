@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testPlanInstance testCasePath="tests/New Account.testcase">
+<testPlanInstance guid="670cb6b2-737f-4dc2-be21-c5915636379f" testCasePath="tests/New Account.testcase">
   <planSettings/>
   <planFeatures/>
 </testPlanInstance>

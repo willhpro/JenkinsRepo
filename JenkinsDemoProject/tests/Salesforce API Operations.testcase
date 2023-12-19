@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="3">
+<testCase guid="6a545bf6-2a4d-45a4-853c-9cafd78f4bb1" id="3">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: DemoOrg (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="ef360b88-628d-42fb-9f7b-21917ef7d8f3" name="ApexConnect" testItemId="1" title="Salesforce Connect: DemoOrg (Test)">
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">DemoOrg</value>
@@ -43,7 +43,7 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="3" title="Set Values: OppName">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="184dab26-2ec6-4019-b00e-71b8768612aa" name="SetValues" testItemId="3" title="Set Values: OppName">
       <arguments>
         <argument id="values">
           <value class="valueList" mutable="Mutable">
@@ -71,7 +71,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="4" title="Create Object: Account=&gt;AccountId">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="acc2e13d-760c-4c65-a069-35c9a0b9394c" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="4" title="Create Object: Account=&gt;AccountId">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Account</value>
@@ -98,7 +98,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Name"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="2" title="Create Object: Opportunity=&gt;OpportunityId">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" guid="b73501ee-a20a-47e7-83b6-fc305b14b940" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="2" title="Create Object: Opportunity=&gt;OpportunityId">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Opportunity</value>
@@ -158,7 +158,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="Type" title="Type"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="6" title="SOQL Query: select Name from Opportunity where Id = '{OpportunityId}'=&gt;OpportunityRows">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" guid="8f53d13b-4408-455c-bc4d-5b05afb88bfc" name="ApexSoqlQuery" testItemId="6" title="SOQL Query: select Name from Opportunity where Id = '{OpportunityId}'=&gt;OpportunityRows">
       <arguments>
         <argument id="soqlQuery">
           <value class="compound">
@@ -182,7 +182,7 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="7" title="Assert: {OpportunityRows.Name} EqualTo {OppName}">
+    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" guid="ca968086-9082-4edb-9713-c013d4b688bc" name="AssertValues" testItemId="7" title="Assert: {OpportunityRows.Name} EqualTo {OppName}">
       <arguments>
         <argument id="expectedValue">
           <value class="variable">
@@ -219,7 +219,7 @@
         <argument id="failureMessage"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexUpdateObject" name="ApexUpdateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand" testItemId="9" title="Update Object: Opportunity = {OpportunityId}">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexUpdateObject" guid="9af3958b-efb9-40c2-b51c-ac62b5790a3a" name="ApexUpdateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand" testItemId="9" title="Update Object: Opportunity = {OpportunityId}">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Opportunity</value>
@@ -251,7 +251,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="StageName" title="StageName"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexReadObject" name="ApexReadObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand" testItemId="10" title="Read Object: Opportunity = {OpportunityId}">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexReadObject" guid="6be3eddb-e386-4291-b546-77f9cb27b530" name="ApexReadObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.ReadCustomObjectTestStepCommand" testItemId="10" title="Read Object: Opportunity = {OpportunityId}">
       <arguments>
         <argument id="objectType">
           <value class="value" valueClass="string">Opportunity</value>
@@ -284,7 +284,7 @@
         <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="StageName" title="Stage"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.Finally" name="Finally" testItemId="11" title="Finally: Delete Opportunity record">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Finally" guid="3c128012-9cad-42d8-bf07-0dd242a95c60" name="Finally" testItemId="11" title="Finally: Delete Opportunity record">
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Delete Opportunity record</value>
@@ -293,7 +293,7 @@
       <clauses>
         <clause name="hidden" testItemId="12">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="13" title="Delete Object: {OpportunityId}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" guid="f3941e55-22a6-4727-9829-37001d14f420" name="ApexDeleteObject" testItemId="13" title="Delete Object: {OpportunityId}">
               <arguments>
                 <argument id="apexConnectionName">
                   <value class="value" valueClass="string">DemoOrg</value>
